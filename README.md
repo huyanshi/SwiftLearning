@@ -17,3 +17,7 @@ while self.imageView == nil {<br>
 * 1.如果imageView存在让RunLoop休眠也就是不执行，但是如果不存在那么就会执行这个线程
 * 2.如果我们不通过这句实现这个作用的话，那么得在fixOrientation()这个方法里面添加判断这样看起来结构很乱
 * 3.NSRunLoop的作用在于有事情做的时候使的当前NSRunLoop的线程工作，没有事情做让当前NSRunLoop的线程休眠
+
+### 3月3日学习项目架构
+* 架构的好处
+            
