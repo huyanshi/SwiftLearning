@@ -25,6 +25,7 @@ while self.imageView == nil {<br>
 ### 苹果推荐斯坦福大学公开课，网易公开课可以看，以前的视频优酷下载挺不错哦
 <br/>
 ### navigationController的navigationbar透明效果
+PS：设置导航title颜色[bar setTitleTextAttributes:@{ NSForegroundColorAttributeName :[UIColor whiteColor]}];
 ####测试一 （效果有点过，title都透明了）
 
             func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
