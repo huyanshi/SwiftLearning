@@ -25,9 +25,9 @@ while self.imageView == nil {<br>
 ### 苹果推荐斯坦福大学公开课，网易公开课可以看，以前的视频优酷下载挺不错哦
 <br/>
 ### navigationController的navigationbar透明效果
-####测试一 （没有起作用）
+####测试一 （效果有点过，title都透明了）
 
-func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
+            func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
         if viewController == self {
             self.navigationController?.navigationBar.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
             self.navigationController?.navigationBar.alpha = 0.300
@@ -41,8 +41,11 @@ func navigationController(navigationController: UINavigationController, didShowV
     }
 ####测试二 （没有起作用）
 
-在viewDidLoad中添加
-navigationController?.navigationBar.translucent = true
-navigationController?.navigationBar.shadowImage = UIImage()
-navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
- 
+            在viewDidLoad中添加
+            navigationController?.navigationBar.translucent = true
+            navigationController?.navigationBar.shadowImage = UIImage()
+            navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
+####测试三 （终于起作用）
+
+            navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Compact)
+            这句是关键性的一句，但是又会出现一个问题，就是navigationBar下面会出现一条线，也就是边框的线
