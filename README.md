@@ -49,3 +49,6 @@ while self.imageView == nil {<br>
 
             navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Compact)
             这句是关键性的一句，但是又会出现一个问题，就是navigationBar下面会出现一条线，也就是边框的线
+            寻找一下边框线也是这个枚举就可以解决
+            navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+            完美解决，获取有更好的办法，找到之后更新
