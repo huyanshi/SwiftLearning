@@ -54,4 +54,5 @@ PS：设置导航title颜色[bar setTitleTextAttributes:@{ NSForegroundColorAttr
             navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
             完美解决，获取有更好的办法，找到之后更新
 #####问题又出现了，当前控制器设置过的navigationBar，在push控制器的时候页面会显示不正常会向下偏移64个点，并且导航栏会变黑
-ps: 导航栏变黑是因为没有给navigationBar配置颜色，在上一个控制器已经设置为半透明，也就是translucent这个属性，
+ps: 导航栏变黑是因为没有给navigationBar配置颜色，在上一个控制器已经设置为半透明，也就是translucent这个属性，navigationBar底部的线条，shadowImage设置就没有了，self.extendedLayoutIncludesOpaqueBars = true这个属性会另显示不正确具体原因还要在找。
+#####总结一下，设置透明只需要设置navigationBar.setBackgroundImage的BarMetrics.Default和给一个shadowImage就没有线条，还需要一个属性translucent = true 就可以了
