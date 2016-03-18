@@ -26,6 +26,7 @@ while self.imageView == nil {<br>
 <br/>
 ### navigationController的navigationbar透明效果
 ####测试一 （没有起作用）
+
 func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
         if viewController == self {
             self.navigationController?.navigationBar.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
@@ -38,4 +39,10 @@ func navigationController(navigationController: UINavigationController, didShowV
             self.navigationController?.navigationBar.translucent = false
         }
     }
+####测试二 （没有起作用）
+
+在viewDidLoad中添加
+navigationController?.navigationBar.translucent = true
+navigationController?.navigationBar.shadowImage = UIImage()
+navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
  
