@@ -23,3 +23,19 @@ while self.imageView == nil {<br>
 
 ### iOS开发中遇到的约束和frame，系统定义的控件有时候那约束改变不了大小 
 ### 苹果推荐斯坦福大学公开课，网易公开课可以看，以前的视频优酷下载挺不错哦
+<br/>
+### navigationController的navigationbar透明效果
+####测试一 （没有起作用）
+func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
+        if viewController == self {
+            self.navigationController?.navigationBar.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            self.navigationController?.navigationBar.alpha = 0.300
+            self.navigationController?.navigationBar.translucent = true
+        }else {
+            self.navigationController?.navigationBar.alpha = 1
+            // 背景颜色设置为系统默认颜色
+            self.navigationController?.navigationBar.tintColor = nil
+            self.navigationController?.navigationBar.translucent = false
+        }
+    }
+ 
