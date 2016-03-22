@@ -56,3 +56,10 @@ PS：设置导航title颜色[bar setTitleTextAttributes:@{ NSForegroundColorAttr
 #####问题又出现了，当前控制器设置过的navigationBar，在push控制器的时候页面会显示不正常会向下偏移64个点，并且导航栏会变黑
 ps: 导航栏变黑是因为没有给navigationBar配置颜色，在上一个控制器已经设置为半透明，也就是translucent这个属性，navigationBar底部的线条，shadowImage设置就没有了，self.extendedLayoutIncludesOpaqueBars = true这个属性会另显示不正确具体原因还要在找。
 #####总结一下，设置透明只需要设置navigationBar.setBackgroundImage的BarMetrics.Default和给一个shadowImage就没有线条，还需要一个属性translucent = true 就可以了
+###iOS开发中设置navigationBar设置中遇见的一系列问题
+    * 在页面设置透明时候跳转之后，其他的页面也会透明
+    * 在viewWilldisAppear之后其他的页面导航有的变黑有的页面正常
+    * 在设置之后页面的显示会不正常，向下偏移
+    * 在使用非系统输入法APP崩溃……
+    * 其他的问题持续发生，一个问题涉及面比较广，产生问题的页面比较多，要看看发生问题的原因解决
+
